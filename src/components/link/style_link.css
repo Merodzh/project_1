@@ -1,0 +1,14 @@
+.menu-item {
+    margin-right: 88px;
+  }
+  
+  .menu-item a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .menu-item a:hover {
+    border-bottom: 2px solid white;
+  }
