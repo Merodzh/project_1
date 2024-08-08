@@ -142,12 +142,14 @@ export default function App() {
             <button onClick={() =>{
               let btnActive = false
               [input_1, input_2, input_3].forEach(element => {
-                if (!element.value) {
-                  alert('заполните все поля')
-                  btnActive = false
+                if(!element.value){
+                  alert('заполните всме ')
+                } else{
+                  btnActive = true
                 }
+                
               });
-              if (btnActive) {
+              if(btnActive){
                 alert("заказ выполнен")
               }
             }} className="button" id="order-action">Оформить заказ</button>
