@@ -2,10 +2,10 @@ import './style.css'
 
 
 
-export default function Burger({src, title, text, price, weight}){
+export default function Burger({src, title, text, price, weight, onClick}){
     return(
         <>
-        <div className="products-item">
+        <div className="products-item" >
             <div className="products-item-image">
               <img src={src} alt="Burger 1" />
             </div>
@@ -19,7 +19,7 @@ export default function Burger({src, title, text, price, weight}){
                 <div className="products-item-weight">{weight}</div>
               </div>
               <div className="products-item-action">
-                <button className="button product-button">
+                <button onClick={onClick}  className="button product-button">
                   <span>Заказать</span>
                   <span>
                     <svg

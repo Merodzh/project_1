@@ -28,7 +28,8 @@ export default function App() {
   const input_1 = useRef(null)
   const input_2 = useRef(null)
   const input_3 = useRef(null)
-
+  const order = useRef(null)
+  const scroll = () => order.current.scrollIntoView({ behavior: "smooth" })
   return (
     <>
       <section className="main">
@@ -91,37 +92,37 @@ export default function App() {
       <div className="container">
         <div id='products-title' className="products-title common-title">выберите свой бургер</div>
         <div className="products-items">
-          
-         <Burger_menu src={Br_1} title={info[0].title} text={info[0].text} price={info[0].price} weight={info[0].weight} />
-         <Burger_menu src={Br_4} title={info[1].title} text={info[0].text} price={info[0].price} weight={info[0].weight} />
-         <Burger_menu src={Br_5} title={info[0].title} text={info[0].text} price={info[0].price} weight={info[1].weight} />
-         <Burger_menu src={Br_6} title={info[0].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
-         <Burger_menu src={Br_7} title={info[1].title} text={info[0].text} price={info[0].price} weight={info[1].weight} />
-         <Burger_menu src={Br_2} title={info[0].title} text={info[0].text} price={info[0].price} weight={info[0].weight} />
-         <Burger_menu src={Br_1} title={info[0].title} text={info[1].text} price={info[0].price} weight={info[1].weight} />
-         <Burger_menu src={Br_7} title={info[1].title} text={info[0].text} price={info[0].price} weight={info[0].weight} />
-         <Burger_menu src={Br_6} title={info[0].title} text={info[0].text} price={info[0].price} weight={info[1].weight} />
-         <Burger_menu src={Br_2} title={info[0].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
-         <Burger_menu src={Br_5} title={info[1].title} text={info[0].text} price={info[1].price} weight={info[0].weight} />
-         <Burger_menu src={Br_4} title={info[0].title} text={info[1].text} price={info[0].price} weight={info[1].weight} />
-         <Burger_menu src={Br_3} title={info[0].title} text={info[0].text} price={info[1].price} weight={info[1].weight} />
-         <Burger_menu src={Br_7} title={info[1].title} text={info[1].text} price={info[1].price} weight={info[0].weight} />
-         <Burger_menu src={Br_3} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
-         <Burger_menu src={Br_3} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
-         <Burger_menu src={Br_6} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
-         <Burger_menu src={Br_7} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
-         <Burger_menu src={Br_3} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
-         <Burger_menu src={Br_2} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
-         <Burger_menu src={Br_1} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
-         <Burger_menu src={Br_3} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
-         <Burger_menu src={Br_5} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
-         <Burger_menu src={Br_6} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
+      
+         <Burger_menu onClick={scroll} src={Br_1} title={info[0].title} text={info[0].text} price={info[0].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_4} title={info[1].title} text={info[0].text} price={info[0].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_5} title={info[0].title} text={info[0].text} price={info[0].price} weight={info[1].weight} />
+         <Burger_menu onClick={scroll} src={Br_6} title={info[0].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_7} title={info[1].title} text={info[0].text} price={info[0].price} weight={info[1].weight} />
+         <Burger_menu onClick={scroll} src={Br_2} title={info[0].title} text={info[0].text} price={info[0].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_1} title={info[0].title} text={info[1].text} price={info[0].price} weight={info[1].weight} />
+         <Burger_menu onClick={scroll} src={Br_7} title={info[1].title} text={info[0].text} price={info[0].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_6} title={info[0].title} text={info[0].text} price={info[0].price} weight={info[1].weight} />
+         <Burger_menu onClick={scroll} src={Br_2} title={info[0].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_5} title={info[1].title} text={info[0].text} price={info[1].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_4} title={info[0].title} text={info[1].text} price={info[0].price} weight={info[1].weight} />
+         <Burger_menu onClick={scroll}src={Br_3} title={info[0].title} text={info[0].text} price={info[1].price} weight={info[1].weight} />
+         <Burger_menu onClick={scroll} src={Br_7} title={info[1].title} text={info[1].text} price={info[1].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_3} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_3} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_6} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_7} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_3} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_2} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_1} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_3} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_5} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
+         <Burger_menu onClick={scroll} src={Br_6} title={info[1].title} text={info[1].text} price={info[0].price} weight={info[0].weight} />
 
         </div>
       </div>
     </section>
 
-    <section className="order" id="order">
+    <section className="order" id="order" ref={order}>
       <div className="container">
         <div id='order-title' className="order-title common-title">оформление заказа</div>
         <img
@@ -139,13 +140,16 @@ export default function App() {
             <Form qet={input_2} placeholder={value.placeholder2} />
             <Form qet={input_3} placeholder={value.placeholder3} />
             <button onClick={() =>{
+              let btnActive = false
               [input_1, input_2, input_3].forEach(element => {
-                if(element.value==''){
-                  
-                } else{
-                  alert('Заказ принят')
+                if (!element.value) {
+                  alert('заполните все поля')
+                  btnActive = false
                 }
               });
+              if (btnActive) {
+                alert("заказ выполнен")
+              }
             }} className="button" id="order-action">Оформить заказ</button>
           </div>
         </div>
